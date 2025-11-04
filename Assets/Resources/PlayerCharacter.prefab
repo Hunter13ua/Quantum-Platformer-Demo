@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4859818148612987558}
   - component: {fileID: 2812477561960566215}
   - component: {fileID: 5477212927381921007}
+  - component: {fileID: 114830039659878518}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -298,6 +299,20 @@ MonoBehaviour:
   OnEntityDestroyed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &114830039659878518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706527326727763323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdfa1763d492884997decaa91d264f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Quantum.Unity::Quantum.QPrototypePlayerCharacter
+  Prototype:
+    _empty_prototype_dummy_field_: 0
 --- !u!1 &6319355132612011911
 GameObject:
   m_ObjectHideFlags: 0

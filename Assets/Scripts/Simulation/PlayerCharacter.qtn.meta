@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-guid: 8a6a609826e0003428b54f457c8ecd6c
-labels:
-- QuantumAsset
+guid: 32fced7a31396c54b951f238ea078ae2
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -9,4 +7,4 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: b30571f93ff71e94cbbf69753610f826, type: 3}
+  script: {fileID: 11500000, guid: 272e0f14b4b64ca6893aadb634328654, type: 3}

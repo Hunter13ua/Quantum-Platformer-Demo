@@ -11,6 +11,7 @@ namespace Quantum.PlatformerDemo
             public EntityRef Entity;
             public Transform3D* Transform;
             public PhysicsBody3D* Body;
+            public PlayerCharacter* PlayerCharacter;
         }
 
         public override void Update(Frame frame, ref Filter filter)
