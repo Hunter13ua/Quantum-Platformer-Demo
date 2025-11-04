@@ -15,8 +15,11 @@ namespace Quantum.PlatformerDemo
 
         public override void Update(Frame frame, ref Filter filter)
         {
-            // gets the input for player 0
-            var input = frame.GetPlayerInput(0);
+            Input* input = default;
+            if (frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* playerLink))
+            {
+                input = frame.GetPlayerInput(playerLink->PlayerRef);
+            }
 
             UpdatePlayerMovement(frame, ref filter, input);
         }
