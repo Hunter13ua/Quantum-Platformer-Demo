@@ -1960,6 +1960,9 @@ MonoBehaviour:
     SystemsConfig:
       Id:
         Value: 519708295491858962
+    ScenesConfig:
+      Id:
+        Value: 362428369149150527
   UseRandomSeed: 0
   SessionConfig: {fileID: 0}
   LocalPlayers:
@@ -2006,6 +2009,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f57527b64bdbd84ea8e667c727d3154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Quantum.PlatformerDemo.LevelFlowListener
+  nextMapAssetRef:
+    Id:
+      Value: 435320253714167296
   nextSceneName: Level2
 --- !u!1 &1865151382
 GameObject:
