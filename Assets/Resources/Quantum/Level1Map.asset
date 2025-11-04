@@ -54,6 +54,11 @@ MonoBehaviour:
     - rid: 6707236027838234624
     - rid: 6707236027838234625
     - rid: 6707236027838234626
+  - Components:
+    - rid: 4955852951278059520
+    - rid: 4955852951278059521
+    - rid: 4955852951278059522
+    - rid: 4955852951278059523
   SerializedTriangleDataUncompressedSize: 8
   references:
     version: 2
@@ -182,6 +187,72 @@ MonoBehaviour:
       data:
         CallbackFlags:
           Value: 0
+    - rid: 4955852951278059520
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 131072
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 917504
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+    - rid: 4955852951278059521
+      type: {class: PhysicsCollider3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        ShapeConfig:
+          ShapeType: 2
+          SphereRadius:
+            RawValue: 32768
+          CapsuleRadius:
+            RawValue: 32768
+          CapsuleHeight:
+            RawValue: 131072
+          PositionOffset:
+            X:
+              RawValue: 0
+            Y:
+              RawValue: 0
+            Z:
+              RawValue: 0
+          BoxExtents:
+            X:
+              RawValue: 65536
+            Y:
+              RawValue: 98304
+            Z:
+              RawValue: 65536
+          RotationOffset:
+            X:
+              RawValue: 0
+            Y:
+              RawValue: 0
+            Z:
+              RawValue: 0
+          UserTag: 0
+          IsPersistent: 1
+          CompoundShapes: []
+        Layer: 0
+        IsTrigger: 1
+        PhysicsMaterial:
+          Id:
+            Value: 0
+    - rid: 4955852951278059522
+      type: {class: PhysicsCallbacks3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        CallbackFlags:
+          Value: 1152
+    - rid: 4955852951278059523
+      type: {class: FinishZonePrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        _empty_prototype_dummy_field_: 0
     - rid: 6707236027838234624
       type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
       data:
