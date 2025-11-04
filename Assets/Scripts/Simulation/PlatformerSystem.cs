@@ -4,7 +4,7 @@ using Photon.Deterministic;
 namespace Quantum.PlatformerDemo
 {
     [Preserve]
-    public unsafe class PlatformerSystem : SystemMainThreadFilter<PlatformerSystem.Filter>
+    public unsafe class PlatformerSystem : SystemMainThreadFilter<PlatformerSystem.Filter>, ISignalOnMapChanged 
     {
         public struct Filter
         {
@@ -13,6 +13,8 @@ namespace Quantum.PlatformerDemo
             public PhysicsBody3D* Body;
             public PlayerCharacter* PlayerCharacter;
         }
+
+        private bool sceneChanged = false;
 
         public override void Update(Frame frame, ref Filter filter)
         {
@@ -23,6 +25,11 @@ namespace Quantum.PlatformerDemo
             }
 
             UpdatePlayerMovement(frame, ref filter, input);
+        }
+
+        public void OnMapChanged(Frame frame, AssetRef<Map> previousMap)
+        {
+            sceneChanged = true;
         }
 
         private void UpdatePlayerMovement(Frame frame, ref Filter filter, Input* input)
@@ -54,9 +61,11 @@ namespace Quantum.PlatformerDemo
                 filter.Body->AddForce(FPVector3.Up * _playerJumpForce);
             }
 
-            if (IsPlayerOutOfBounds(frame, filter.Transform))
+            // if player falls of the map or the scene was changed, return to spawn pos
+            if (IsPlayerOutOfBounds(frame, filter.Transform) || sceneChanged)
             {
                 ReturnPlayerToSpawnPosition(frame, ref filter);
+                sceneChanged = false;
             }
         }
 
