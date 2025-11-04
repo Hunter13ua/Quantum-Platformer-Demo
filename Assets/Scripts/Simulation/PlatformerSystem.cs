@@ -26,8 +26,8 @@ namespace Quantum.PlatformerDemo
 
         private void UpdatePlayerMovement(Frame frame, ref Filter filter, Input* input)
         {
-            FP _playerAcceleration = 10;
-            FP _playerJumpForce = 50;
+            FP _playerAcceleration = 8;
+            FP _playerJumpForce = 128;
 
             if (input->Left)
             {
@@ -48,10 +48,23 @@ namespace Quantum.PlatformerDemo
                 filter.Body->AddForce(-FPVector3.Forward * _playerAcceleration);
             }
 
-            if (input->Jump)
+            if (input->Jump && IsPlayerGrounded(frame, filter))
             {
                 filter.Body->AddForce(FPVector3.Up * _playerJumpForce);
             }
+        }
+
+        private bool IsPlayerGrounded(Frame frame, Filter filter)
+        {
+            FP height = FP._0_50; // half height of the character
+            FP tolerance = FP._0_05; // small offset
+
+            var origin = filter.Transform->Position;
+            var direction = FPVector3.Down;
+            var distance = height + tolerance;
+
+            
+            return frame.Physics3D.Raycast(origin, direction, distance) != null;
         }
     }
 }
