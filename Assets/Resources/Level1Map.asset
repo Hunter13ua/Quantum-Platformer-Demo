@@ -127,7 +127,7 @@ MonoBehaviour:
           X:
             RawValue: 0
           Y:
-            RawValue: -32768
+            RawValue: -65536
           Z:
             RawValue: 458752
         Rotation:
