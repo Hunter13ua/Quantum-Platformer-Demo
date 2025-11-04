@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SimulationConfig
   m_EditorClassIdentifier: Quantum.Simulation::Quantum.SimulationConfig
   Identifier:
-    Path: Resources/SimulationConfig
+    Path: Resources/Quantum/SimulationConfig
     Guid:
       Value: 322203967770169033
   Entities:

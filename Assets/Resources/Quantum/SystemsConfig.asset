@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SystemsConfig
   m_EditorClassIdentifier: Quantum.Simulation::Quantum.SystemsConfig
   Identifier:
-    Path: Resources/SystemsConfig
+    Path: Resources/Quantum/SystemsConfig
     Guid:
       Value: 519708295491858962
   Entries:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level2Map
   m_EditorClassIdentifier: Quantum.Engine.dll::Quantum.Map
   Identifier:
-    Path: Resources/Level2Map
+    Path: Resources/Quantum/Level2Map
     Guid:
       Value: 435320253714167296
   UserAsset:

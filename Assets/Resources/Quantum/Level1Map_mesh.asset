@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level1Map_mesh
   m_EditorClassIdentifier: Quantum.Engine.dll::Quantum.BinaryData
   Identifier:
-    Path: Resources/Level1Map_mesh
+    Path: Resources/Quantum/Level1Map_mesh
     Guid:
       Value: 466079257524302680
   Data: 0000000000000000
