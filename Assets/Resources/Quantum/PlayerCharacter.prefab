@@ -312,7 +312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Quantum.Unity::Quantum.QPrototypePlayerCharacter
   Prototype:
-    _empty_prototype_dummy_field_: 0
+    IsGrounded:
+      Value: 0
 --- !u!1 &6799696478833562347
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +418,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0581a25fa0d02fc49b4932d5e430f3d8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5879012248733055499}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0581a25fa0d02fc49b4932d5e430f3d8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7872387239548337417}
   m_SourcePrefab: {fileID: 100100000, guid: 0581a25fa0d02fc49b4932d5e430f3d8, type: 3}
 --- !u!1 &6926388893648183521 stripped
 GameObject:
@@ -445,6 +449,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7872387239548337417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6926388893648183521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9100edc7f3866409dfead9f6e0cc60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Quantum.PlatformerDemo.CharacterAnimator
+  animator: {fileID: 5879012248733055499}
+  rotationSpeed: 10
 --- !u!4 &7733994119381138011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0581a25fa0d02fc49b4932d5e430f3d8, type: 3}

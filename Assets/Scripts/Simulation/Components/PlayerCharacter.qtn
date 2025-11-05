@@ -1,3 +1,4 @@
 component PlayerCharacter
 {
+    bool IsGrounded;
 }

@@ -24,6 +24,9 @@ namespace Quantum.PlatformerDemo
                 input = frame.GetPlayerInput(playerLink->PlayerRef);
             }
 
+            // Update grounded state
+            filter.PlayerCharacter->IsGrounded = IsPlayerGrounded(frame, filter);
+
             UpdatePlayerMovement(frame, ref filter, input);
         }
 

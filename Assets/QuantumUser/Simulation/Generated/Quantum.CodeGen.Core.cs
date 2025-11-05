@@ -660,15 +660,17 @@ namespace Quantum {
     public const Int32 SIZE = 4;
     public const Int32 ALIGNMENT = 4;
     [FieldOffset(0)]
-    private fixed Byte _alignment_padding_[4];
+    public QBoolean IsGrounded;
     public override readonly Int32 GetHashCode() {
       unchecked { 
         var hash = 17027;
+        hash = hash * 31 + IsGrounded.GetHashCode();
         return hash;
       }
     }
     public static void Serialize(void* ptr, FrameSerializer serializer) {
         var p = (PlayerCharacter*)ptr;
+        QBoolean.Serialize(&p->IsGrounded, serializer);
     }
   }
   [StructLayout(LayoutKind.Explicit)]

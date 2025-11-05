@@ -85,8 +85,7 @@ namespace Quantum.Prototypes {
   [System.SerializableAttribute()]
   [Quantum.Prototypes.Prototype(typeof(Quantum.PlayerCharacter))]
   public unsafe partial class PlayerCharacterPrototype : ComponentPrototype<Quantum.PlayerCharacter> {
-    [HideInInspector()]
-    public Int32 _empty_prototype_dummy_field_;
+    public QBoolean IsGrounded;
     partial void MaterializeUser(Frame frame, ref Quantum.PlayerCharacter result, in PrototypeMaterializationContext context);
     public override Boolean AddToEntity(FrameBase f, EntityRef entity, in PrototypeMaterializationContext context) {
         Quantum.PlayerCharacter component = default;
@@ -94,6 +93,7 @@ namespace Quantum.Prototypes {
         return f.Set(entity, component) == SetResult.ComponentAdded;
     }
     public void Materialize(Frame frame, ref Quantum.PlayerCharacter result, in PrototypeMaterializationContext context = default) {
+        result.IsGrounded = this.IsGrounded;
         MaterializeUser(frame, ref result, in context);
     }
   }
