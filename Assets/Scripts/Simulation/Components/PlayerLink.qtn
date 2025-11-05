@@ -1,4 +1,6 @@
+// Component that links a simulation entity to a specific player in the game session
+// Used to identify which player controls which character entity
 component PlayerLink
 {
-    player_ref PlayerRef;
+    player_ref PlayerRef; // Reference to the player who owns this entity
 }

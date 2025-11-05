@@ -1,4 +1,6 @@
+// Marker component for entities that act as level finish zones
+// When a player collides with an entity containing this component, the level is completed
 component FinishZone
 {
-    
+
 }

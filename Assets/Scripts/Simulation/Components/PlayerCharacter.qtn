@@ -1,4 +1,5 @@
+// Component attached to player entities to track character-specific state
 component PlayerCharacter
 {
-    bool IsGrounded;
+    bool IsGrounded; // True when the character is touching the ground, used for jump logic and animations
 }

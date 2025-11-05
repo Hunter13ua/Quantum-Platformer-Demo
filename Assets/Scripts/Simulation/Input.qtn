@@ -1,7 +1,9 @@
+// Input definition for the platformer game
+// Defines the available input buttons that players can press
 input {
-    button Left;
-    button Right;
-    button Forward;
-    button Backwards;
-    button Jump;
+    button Left;      // Move left (A key or Left Arrow)
+    button Right;     // Move right (D key or Right Arrow)
+    button Forward;   // Move forward (W key or Up Arrow)
+    button Backwards; // Move backwards (S key or Down Arrow)
+    button Jump;      // Jump action (Space key)
 }
